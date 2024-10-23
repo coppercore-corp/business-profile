@@ -1,0 +1,30 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.html", // This will be generated in the build folder
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dist" // This should point to your output directory from Vite
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/contacts",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/products",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html" // This will handle all other routes
+      }
+    ]
+  }
