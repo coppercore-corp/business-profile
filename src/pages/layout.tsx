@@ -59,8 +59,8 @@ function Menu(){
                 <List>
                     {[
                         {name:'Home', link:'/'},
-                        {name: 'Contacts', link :'/contacts/'},
-                        {name:'Our Products', link:'/products/'}
+                        {name: 'Contacts', link :'/contacts'},
+                        {name:'Our Products', link:'/products'}
                     ].map((item) => (
                         <ListItem key={item.link} disablePadding>
                             <ListItemButton href={item.link}>

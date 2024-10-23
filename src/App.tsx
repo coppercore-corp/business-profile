@@ -13,8 +13,8 @@ export default function App() {
           <Routes>
               <Route path="/" element={<Layout />}>
                   <Route path="/" element={<Suspense fallback={<div>Loading Home...</div>}><LazyHome /></Suspense>} />
-                  <Route path="/contacts/" element={<Suspense fallback={<div>Loading Contacts...</div>}><LazyContacts /></Suspense>} />
-                  <Route path="/products/" element={<Suspense fallback={<div>Loading Products...</div>}><LazyProducts /></Suspense>} />
+                  <Route path="/contacts" element={<Suspense fallback={<div>Loading Contacts...</div>}><LazyContacts /></Suspense>} />
+                  <Route path="/products" element={<Suspense fallback={<div>Loading Products...</div>}><LazyProducts /></Suspense>} />
               </Route>
           </Routes>
     </Router>
