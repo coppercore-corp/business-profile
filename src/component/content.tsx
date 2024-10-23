@@ -9,7 +9,7 @@ interface ContainerProps {
     src_url?: string;
     img_width?: number;
 }
-const Container = styled('div')<ContainerProps>(({ theme, has_image, horizontal_direction='ltr', enable_background=false, src_url}) => ({
+const Container = styled('div')<ContainerProps>(({has_image, horizontal_direction='ltr'}) => ({
     display: 'grid',
     gridTemplateColumns: (has_image)?'40% 60%':'unset',
     gap: '10px',
@@ -20,7 +20,7 @@ const Container = styled('div')<ContainerProps>(({ theme, has_image, horizontal_
         gridTemplateColumns: '100%', // Adjust the column layout for smaller screens
     },
 }));
-const ItemImage = styled('div')<ContainerProps>(({ theme, img_width=1, horizontal_direction='ltr', src_url}) => ({
+const ItemImage = styled('div')<ContainerProps>(({img_width=1, horizontal_direction='ltr', src_url}) => ({
     backgroundPosition: 'right top',
     backgroundRepeat: 'no-repeat',
     marginTop: '4rem',
@@ -44,7 +44,7 @@ const ItemImage = styled('div')<ContainerProps>(({ theme, img_width=1, horizonta
         }
     }
 }));
-const ItemDetails = styled('div')<ContainerProps>(({theme, has_image, horizontal_direction='ltr'}) =>({
+const ItemDetails = styled('div')<ContainerProps>(({has_image, horizontal_direction='ltr'}) =>({
     padding: '10px',
     margin: (has_image)?'unset':'0 auto',
     '& div#first': {
@@ -68,7 +68,7 @@ const ItemDetails = styled('div')<ContainerProps>(({theme, has_image, horizontal
     },
 }));
 
-const BackgroundWall = styled('div')<ContainerProps>(({theme, src_url})=>({
+const BackgroundWall = styled('div')<ContainerProps>(({src_url})=>({
     // position: 'sticky',
     position: 'fixed',
     width : '100vw',
@@ -103,7 +103,7 @@ children: string | number | boolean | ReactElement<any, string | JSXElementConst
         const details = details_ref.current;
 
         const hor_direction = props.direction || 'ltr';
-        const exit_multiplier = 0.55;
+        // const exit_multiplier = 0.55;
         const entry_multiplier = 0.9;
         const screen_height = window.innerHeight;
 

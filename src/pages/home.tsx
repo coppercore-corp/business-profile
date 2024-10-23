@@ -1,4 +1,4 @@
-import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useRef } from "react";
+import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal } from "react";
 import Carousel from 'react-material-ui-carousel';
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import { Paper, Button} from '@mui/material';
@@ -49,7 +49,7 @@ function Item(props: { item: { image: any; name: string | number | boolean | Rea
     )
 }
 const theme = createTheme();
-const CarouselContainer = styled('div')(({theme}) => ({
+const CarouselContainer = styled('div')(() => ({
     '& div.car-body': {
         margin: '0'
     },
@@ -59,9 +59,9 @@ const CarouselContainer = styled('div')(({theme}) => ({
 }));
 
 function Home() {
-    const container_aboutus_ref = useRef(null);
-    const about_details_ref = useRef(null);
-    const about_img_ref = useRef(null);
+    // const container_aboutus_ref = useRef(null);
+    // const about_details_ref = useRef(null);
+    // const about_img_ref = useRef(null);
     var carousel_height = ((window.innerWidth < 610)?420:620);
 
 
